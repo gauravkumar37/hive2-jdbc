@@ -34,28 +34,25 @@ Refer to the PDF documentation in the downloaded zip for more information.
 There are 4 examples in this project:
 
 1. Hive2User
-
-This class works with `hive.server2.authentication` set to `None`.
-You need to specify the username only.
+	This class works with `hive.server2.authentication` set to `None`.
+	You need to specify the username only.
 
 2. Hive2UserPswd
-
-This class works  with `hive.server2.authentication` set to `LDAP` or `None`.
-You need to specify both the username and password.
+	This class works  with `hive.server2.authentication` set to `LDAP` or `None`.
+	You need to specify both the username and password.
 
 3. Hive2KerberosKinit
-
-This class works  with `hive.server2.authentication` set to `Kerberos`.
-The onus of generating a valid Kerberos ticket lies with the client.
-This assumes that:
+	This class works  with `hive.server2.authentication` set to `Kerberos`.
+	The onus of generating a valid Kerberos ticket lies with the client.
+	This assumes that:
 	1. Kerberos client utilities are installed in the system.
 	2. Valid krb5.ini file is present in `/etc/krb5.ini`
 	3. Client has obtained a valid ticket beforehand by calling `kinit` or authenticating with a valid `keytab` file.
 
 4. Hive2KerberosTGT
-This class also works  with `hive.server2.authentication` set to `Kerberos`.
-However, in this case, the code/driver obtains the Kerberos ticket.
-The code needs 3 files (currently present in `conf` directory):
+	This class also works  with `hive.server2.authentication` set to `Kerberos`.
+	However, in this case, the code/driver obtains the Kerberos ticket.
+	The code needs 3 files (currently present in `conf` directory):
 	1. `kerberos_login_config.ini`
 	2. `krb5.ini`
 	3. `<username>.keytab`
